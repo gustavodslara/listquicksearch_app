@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-searchbar
+      [ngModel]="filtro"
+      showCancelButton="always"
+      cancelButtonText="Cancelar"
+      placeholder="Buscar"
+      animated="true"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let p of produtos">
+      <ion-label>{{ p.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- <add-product-container name="Tab 1 page"></add-product-container> -->
+</ion-content>
