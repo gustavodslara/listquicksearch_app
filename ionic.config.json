@@ -1,5 +1,7 @@
 {
   "name": "productquicksearchapp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "productquicksearchapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

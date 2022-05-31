@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-searchbar
-      [ngModel]="filtro"
-      showCancelButton="always"
+      [(ngModel)]="filtro"
       cancelButtonText="Cancelar"
+      showCancelButton="focus"
       placeholder="Buscar"
-      animated="true"
     ></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let p of produtos">
+    <ion-item *ngFor="let p of produtos | filter: filtro">
       <ion-label>{{ p.name }}</ion-label>
     </ion-item>
   </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="presentPrompt()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <!-- <add-product-container name="Tab 1 page"></add-product-container> -->
 </ion-content>
